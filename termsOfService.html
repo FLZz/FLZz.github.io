@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service - Sweepio</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+    -webkit-font-smoothing: antialiased;
+}
+.page-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+    padding: 48px 20px 40px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: #f5f5f7;
+    border-radius: 24px 24px 0 0;
+}
+.header-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+.header .subtitle {
+    font-size: 15px;
+    opacity: 0.85;
+    font-weight: 400;
+}
+/* Nav */
+.nav-bar {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 20px 20px 0;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.nav-bar a {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.nav-bar a.active {
+    background: #1a73e8;
+    color: #fff;
+}
+.nav-bar a.inactive {
+    background: #e8e8ed;
+    color: #1d1d1f;
+}
+.nav-bar a.inactive:hover {
+    background: #dcdce0;
+}
+/* Content */
+.content {
+    padding: 32px 0 64px;
+}
+.effective-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #86868b;
+    background: #e8e8ed;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+}
+.intro {
+    font-size: 16px;
+    color: #424245;
+    margin-bottom: 28px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+/* Sections */
+.section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.section-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #e8f0fe;
+    color: #1a73e8;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.section h2 {
+    display: inline;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d1d1f;
+    letter-spacing: -0.01em;
+    vertical-align: middle;
+}
+.section p {
+    font-size: 15px;
+    color: #424245;
+    margin-top: 14px;
+}
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 14px;
+}
+.section li {
+    font-size: 15px;
+    color: #424245;
+    padding: 8px 0 8px 24px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f2;
+}
+.section li:last-child { border-bottom: none; }
+.section li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 16px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1a73e8;
+}
+.section li strong {
+    color: #1d1d1f;
+    font-weight: 600;
+}
+/* Callout boxes */
+.callout {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid #1a73e8;
+}
+.callout-info p { color: #1a3a5c; margin: 4px 0; }
+.callout-warning {
+    background: #fef7e0;
+    border-left: 4px solid #f9ab00;
+}
+.callout-warning p { color: #5d4037; margin: 4px 0; }
+.callout-danger {
+    background: #fce8e6;
+    border-left: 4px solid #d93025;
+}
+.callout-danger p { color: #5f2120; margin: 4px 0; }
+/* Uppercase legal text */
+.legal-uppercase {
+    font-size: 14px;
+    color: #6e6e73;
+    letter-spacing: 0.02em;
+    margin-top: 14px;
+}
+/* Links */
+a { color: #1a73e8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 13px;
+    color: #86868b;
+    border-top: 1px solid #e8e8ed;
+}
+.footer a { color: #86868b; }
+/* Responsive */
+@media (max-width: 480px) {
+    .header { padding: 36px 16px 32px; }
+    .header h1 { font-size: 24px; }
+    .section { padding: 20px 16px; }
+    .section h2 { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-icon">&#128220;</div>
+    <h1>Terms of Service</h1>
+    <p class="subtitle">Sweepio - Phone Cleaner</p>
+</div>
+
+<div class="nav-bar">
+    <a href="privacy_policy.html" class="inactive">Privacy Policy</a>
+    <a href="terms_of_service.html" class="active">Terms of Service</a>
+</div>
+
+<div class="page-wrapper">
+<div class="content">
+
+<div class="effective-date">&#128197; Effective: June 11, 2026</div>
+
+<div class="intro">
+    By downloading, installing, or using the Sweepio application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.
+</div>
+
+<div class="section">
+    <span class="section-number">1</span><h2>Acceptance of Terms</h2>
+    <p>By using Sweepio, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy_policy.html">Privacy Policy</a>. If you are using the App on behalf of an organization, you represent that you have the authority to bind that organization to these Terms.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">2</span><h2>Age Requirements</h2>
+    <p>You must be at least <strong>13 years of age</strong> to use this App. If you are under 18, you should have your parent or guardian review these Terms and agree to them before you use the App. If you are a parent or guardian, you are responsible for your child's use of the App.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">3</span><h2>Description of Service</h2>
+    <p>Sweepio is a phone cleaner application that provides the following features:</p>
+    <ul>
+        <li>Scanning device storage for junk files, cache, and temporary files</li>
+        <li>Detecting and removing duplicate and similar files</li>
+        <li>Managing installed applications</li>
+        <li>Cleaning app cache and uninstall residuals</li>
+        <li>Identifying large files for review</li>
+        <li>Auto-cleaning app cache via accessibility service</li>
+        <li>Managing files in the recycle bin</li>
+    </ul>
+    <p>The App operates entirely on your device. All scanning and cleaning operations are performed locally without sending any data to external servers.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">4</span><h2>Advertisements</h2>
+    <p>The App displays advertisements provided by Google AdMob. By using the App, you acknowledge that:</p>
+    <ul>
+        <li>Advertisements may be shown within the App during normal use.</li>
+        <li>AdMob may use device information and advertising ID to serve personalized ads. You can opt out of personalized advertising through your device settings.</li>
+        <li>We do not control the content of third-party advertisements. Any interactions with advertised products or services are between you and the advertiser.</li>
+        <li>Some features may offer the option to watch a rewarded advertisement to unlock additional functionality.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <span class="section-number">5</span><h2>User Responsibilities</h2>
+    <p>You are responsible for:</p>
+    <ul>
+        <li><strong>Reviewing files before deletion.</strong> Sweepio identifies potentially cleanable files, but the final decision to delete rests with you.</li>
+        <li><strong>Maintaining backups of important data.</strong> Deleted files may not be recoverable.</li>
+        <li>Granting appropriate permissions required for the App to function correctly.</li>
+        <li>Using the accessibility service feature responsibly and only for its intended purpose of auto-cleaning app cache.</li>
+        <li>Complying with all applicable laws and regulations when using the App.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <span class="section-number">6</span><h2>Disclaimer of Warranties</h2>
+    <p class="legal-uppercase">THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+    <p>We do not warrant that:</p>
+    <ul>
+        <li>The App will function uninterrupted, secure, or error-free.</li>
+        <li>All junk files will be accurately identified.</li>
+        <li>No important files will be mistakenly identified as cleanable.</li>
+        <li>The results obtained from the use of the App will be accurate or reliable.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <span class="section-number">7</span><h2>Limitation of Liability</h2>
+    <p class="legal-uppercase">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM:</p>
+    <ul>
+        <li>Your use of or inability to use the App.</li>
+        <li>Any deletion of files performed through the App, whether intentional or accidental.</li>
+        <li>Any unauthorized access to or use of our servers or any personal information stored therein.</li>
+        <li>Any bugs, viruses, or other harmful code transmitted through the App.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <span class="section-number">8</span><h2>Data Deletion Warning</h2>
+    <p>Sweepio provides a recycle bin feature that temporarily stores deleted files before permanent removal. However:</p>
+    <ul>
+        <li>Files in the recycle bin are automatically and permanently deleted after the configured retention period.</li>
+        <li>Permanently deleted files cannot be recovered by the App.</li>
+        <li>Some files deleted by system-level cleaning operations may bypass the recycle bin.</li>
+        <li>We strongly recommend reviewing all items before deletion and maintaining backups of important data.</li>
+    </ul>
+    <div class="callout callout-danger">
+        <p><strong>Important:</strong> File deletion is irreversible in most cases. Please carefully review all items before confirming deletion. We are not responsible for any data loss resulting from the use of this App.</p>
+    </div>
+</div>
+
+<div class="section">
+    <span class="section-number">9</span><h2>Intellectual Property</h2>
+    <p>The App, including its original content, features, and functionality, is owned by Sweepio and is protected by international copyright, trademark, and other intellectual property laws. You may not:</p>
+    <ul>
+        <li>Copy, modify, or distribute any part of the App without our prior written consent.</li>
+        <li>Reverse engineer, decompile, or disassemble the App.</li>
+        <li>Use the App for any unlawful purpose or in violation of these Terms.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <span class="section-number">10</span><h2>Modifications to Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. If we make significant changes, we will notify you through the App before the changes take effect. Your continued use of the App after any modifications constitutes your acceptance of the updated Terms.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">11</span><h2>Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the People's Republic of China, without regard to its conflict of law provisions.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">12</span><h2>Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us at:</p>
+    <p><a href="mailto:legal@sweepio.app">legal@sweepio.app</a></p>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 Sweepio. All rights reserved.</p>
+    <p><a href="privacy_policy.html">Privacy Policy</a></p>
+</div>
+
+</body>
+</html>
