@@ -1,11 +1,323 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>隐私政策</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Sweepio</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+    -webkit-font-smoothing: antialiased;
+}
+.page-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+    padding: 48px 20px 40px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: #f5f5f7;
+    border-radius: 24px 24px 0 0;
+}
+.header-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+.header .subtitle {
+    font-size: 15px;
+    opacity: 0.85;
+    font-weight: 400;
+}
+/* Nav */
+.nav-bar {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 20px 20px 0;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.nav-bar a {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.nav-bar a.active {
+    background: #1a73e8;
+    color: #fff;
+}
+.nav-bar a.inactive {
+    background: #e8e8ed;
+    color: #1d1d1f;
+}
+.nav-bar a.inactive:hover {
+    background: #dcdce0;
+}
+/* Content */
+.content {
+    padding: 32px 0 64px;
+}
+.effective-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #86868b;
+    background: #e8e8ed;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+}
+.intro {
+    font-size: 16px;
+    color: #424245;
+    margin-bottom: 28px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+/* Sections */
+.section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.section-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #e8f0fe;
+    color: #1a73e8;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.section h2 {
+    display: inline;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d1d1f;
+    letter-spacing: -0.01em;
+    vertical-align: middle;
+}
+.section p {
+    font-size: 15px;
+    color: #424245;
+    margin-top: 14px;
+}
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 14px;
+}
+.section li {
+    font-size: 15px;
+    color: #424245;
+    padding: 8px 0 8px 24px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f2;
+}
+.section li:last-child { border-bottom: none; }
+.section li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 16px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1a73e8;
+}
+.section li strong {
+    color: #1d1d1f;
+    font-weight: 600;
+}
+/* Callout boxes */
+.callout {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid #1a73e8;
+}
+.callout-info p { color: #1a3a5c; margin: 4px 0; }
+.callout-warning {
+    background: #fef7e0;
+    border-left: 4px solid #f9ab00;
+}
+.callout-warning p { color: #5d4037; margin: 4px 0; }
+/* Links */
+a { color: #1a73e8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 13px;
+    color: #86868b;
+    border-top: 1px solid #e8e8ed;
+}
+.footer a { color: #86868b; }
+/* Responsive */
+@media (max-width: 480px) {
+    .header { padding: 36px 16px 32px; }
+    .header h1 { font-size: 24px; }
+    .section { padding: 20px 16px; }
+    .section h2 { font-size: 16px; }
+}
+</style>
 </head>
 <body>
-<h2>隐私政策</h2>
-<p>本应用不会收集用户手机号、位置等敏感隐私信息，仅接入AdMob广告用于产品免费运营。</p>
+
+<div class="header">
+    <div class="header-icon">&#128274;</div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Sweepio - Phone Cleaner</p>
+</div>
+
+<div class="nav-bar">
+    <a href="privacy_policy.html" class="active">Privacy Policy</a>
+    <a href="terms_of_service.html" class="inactive">Terms of Service</a>
+</div>
+
+<div class="page-wrapper">
+<div class="content">
+
+<div class="effective-date">&#128197; Effective: June 11, 2026</div>
+
+<div class="intro">
+    This Privacy Policy describes how Sweepio ("we," "our," or "us") handles information when you use our mobile application. We are committed to protecting your privacy and being transparent about our data practices.
+</div>
+
+<div class="section">
+    <span class="section-number">1</span><h2>Information We Collect and Use</h2>
+    <p>Sweepio is designed with privacy as a core principle. We <strong>do not collect, store, or transmit</strong> any personal information to our own servers.</p>
+    <ul>
+        <li>We do not collect personal identifiers (name, email, phone number, etc.)</li>
+        <li>We do not collect device identifiers such as IMEI</li>
+        <li>We do not collect location data</li>
+        <li>We do not collect browsing history or usage analytics</li>
+        <li>We do not share any data with third parties beyond what is described in Section 4</li>
+    </ul>
+    <p>All scanning, analysis, and cleaning operations are performed entirely on your device. No data ever leaves your device through our own services.</p>
+    <div class="callout callout-info">
+        <p><strong>Note on Advertising:</strong> Our advertising partner Google AdMob may collect device information (such as device model, OS version, and advertising ID) to serve ads. You can opt out of personalized advertising in your device settings. See Section 4 for details.</p>
+    </div>
+</div>
+
+<div class="section">
+    <span class="section-number">2</span><h2>Permissions We Request</h2>
+    <p>Sweepio requires certain permissions to perform its cleaning functions. Each permission is used solely for its stated purpose:</p>
+    <ul>
+        <li><strong>Storage / Manage External Storage:</strong> Required to scan device storage for junk files, cache, duplicates, large files, and other cleanable content. This permission allows the app to read file metadata and delete selected files.</li>
+        <li><strong>Package Usage Stats (Usage Access):</strong> Required to calculate app cache sizes and provide accurate storage usage information for each installed application.</li>
+        <li><strong>Query All Packages:</strong> Required to list installed applications for app management features, including cache scanning and uninstall residual detection.</li>
+        <li><strong>Accessibility Service:</strong> Used exclusively for the auto-clean feature, which automates tapping the "Clear Cache" button in system settings. The accessibility service does not read, collect, or transmit any personal data. It only interacts with the system settings UI to clear app cache.</li>
+        <li><strong>Request Delete Packages:</strong> Required to support app uninstallation functionality.</li>
+        <li><strong>Request Install Packages:</strong> Required to install APK files opened from within the app.</li>
+        <li><strong>Post Notifications:</strong> Required to send notifications about uninstall residual alerts and cleaning results.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <span class="section-number">3</span><h2>Data Storage and Security</h2>
+    <p>All scan results and temporary data are stored in your device's memory (RAM) only. When you close the app or restart your device, this temporary data is automatically cleared. No persistent database of your files or personal information is created.</p>
+    <p>Deleted files are moved to an in-app recycle bin (stored locally on your device) with a configurable auto-deletion period, giving you time to recover accidentally deleted items. Files in the recycle bin are permanently deleted after the configured period.</p>
+    <p>When you uninstall Sweepio, all app data including the recycle bin is permanently removed from your device.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">4</span><h2>Third-Party Services</h2>
+    <p>Sweepio uses the following third-party services:</p>
+    <ul>
+        <li><strong>Google AdMob:</strong> We use Google AdMob to display advertisements within the app. AdMob may collect certain device information (such as device model, OS version, and advertising ID) to serve relevant ads. AdMob's data practices are governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. You can opt out of personalized advertising through your device settings (Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization).</li>
+        <li><strong>Google Play In-App Update:</strong> We use Google Play Core's In-App Update API to check for and prompt app updates. This service communicates with Google Play to determine if an update is available. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+    </ul>
+    <p>We do not use any analytics services, crash reporting services, or social sharing features.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">5</span><h2>Your Rights and Choices</h2>
+    <p>Depending on your jurisdiction, you may have the following rights:</p>
+    <ul>
+        <li><strong>Right to Access:</strong> You can request information about the data we process about you. Since we do not collect personal data, there is typically no data to access beyond what is on your device.</li>
+        <li><strong>Right to Deletion:</strong> You can delete all app data at any time by clearing the app's data in your device settings or uninstalling the app.</li>
+        <li><strong>Right to Opt Out of Personalized Ads:</strong> You can opt out of personalized advertising by Google AdMob through your device settings (Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization) or by resetting your advertising ID.</li>
+        <li><strong>Right to Revoke Permissions:</strong> You can revoke any permission granted to the app at any time through your device settings (Settings &gt; Apps &gt; Sweepio &gt; Permissions).</li>
+    </ul>
+    <p>To exercise any of these rights, you do not need to contact us &mdash; all controls are available directly on your device. If you have questions, you may contact us at the email address in Section 8.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">6</span><h2>Children's Privacy</h2>
+    <p>Sweepio does not knowingly collect personal information from children. Since we do not collect any personal data from any users regardless of age, our app is safe for users of all ages. We do not target children specifically, and we do not offer any child-directed content or services.</p>
+    <p>Our app is not designated as a "Designed for Families" app on Google Play. Parents or guardians may wish to supervise younger children when using the app, as it includes the ability to delete files.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">7</span><h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. If we make significant changes, we will notify you through the app before the changes take effect. Your continued use of the app after any changes constitutes your acceptance of the updated Privacy Policy.</p>
+</div>
+
+<div class="section">
+    <span class="section-number">8</span><h2>Contact Us</h2>
+    <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+    <p><a href="mailto:privacy@sweepio.app">privacy@sweepio.app</a></p>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 Sweepio. All rights reserved.</p>
+    <p><a href="terms_of_service.html">Terms of Service</a></p>
+</div>
+
 </body>
 </html>
