@@ -1,8 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweepio - Legal</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    color: #1d1d1f;
+    background: #f5f5f7;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+    padding: 48px 20px 40px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: #f5f5f7;
+    border-radius: 24px 24px 0 0;
+}
+.header-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+.header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+.header .subtitle { font-size: 15px; opacity: 0.85; }
+.page-wrapper { max-width: 720px; margin: 0 auto; padding: 0 20px; flex: 1; }
+.content { padding: 32px 0 64px; }
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    text-decoration: none;
+    display: block;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.card-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 12px;
+}
+.card-icon-blue { background: #e8f0fe; }
+.card-icon-green { background: #e6f4ea; }
+.card h2 { font-size: 18px; font-weight: 600; color: #1d1d1f; margin-bottom: 6px; }
+.card p { font-size: 14px; color: #86868b; }
+.card .arrow { float: right; color: #c7c7cc; font-size: 20px; margin-top: -30px; }
+.footer {
+    text-align: center; padding: 32px 20px;
+    font-size: 13px; color: #86868b;
+    border-top: 1px solid #e8e8ed;
+}
+</style>
+</head>
 <body>
-<h1>App开发者主页</h1>
-<p>开发者：FLZz</p>
-<p>隐私政策：<a href="privacy_policy.html">查看</a></p>
+
+<div class="header">
+    <div class="header-icon">&#128736;</div>
+    <h1>Sweepio</h1>
+    <p class="subtitle">Phone Cleaner</p>
+</div>
+
+<div class="page-wrapper">
+<div class="content">
+
+<a class="card" href="privacy_policy.html">
+    <div class="card-icon card-icon-blue">&#128274;</div>
+    <h2>Privacy Policy</h2>
+    <p>How we handle and protect your data</p>
+    <span class="arrow">&#8250;</span>
+</a>
+
+<a class="card" href="terms_of_service.html">
+    <div class="card-icon card-icon-green">&#128220;</div>
+    <h2>Terms of Service</h2>
+    <p>Rules and guidelines for using our app</p>
+    <span class="arrow">&#8250;</span>
+</a>
+
+</div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 Sweepio. All rights reserved.</p>
+    <p>Developer: FLZz</p>
+</div>
+
 </body>
 </html>
